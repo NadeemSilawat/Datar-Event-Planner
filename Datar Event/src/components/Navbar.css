@@ -1,0 +1,134 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent;
+    transition: all var(--transition-normal);
+    padding: var(--spacing-md) 0;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-sm) 0;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    cursor: pointer;
+}
+
+.logo-text {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+.logo-accent {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-lg);
+    margin: 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-dark);
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-gold);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-cta {
+    display: inline-block;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    color: var(--color-dark);
+    padding: 0.5rem;
+}
+
+.mobile-menu {
+    overflow: hidden;
+    background: var(--color-white);
+    box-shadow: var(--shadow-md);
+}
+
+.mobile-menu-links {
+    list-style: none;
+    padding: var(--spacing-md);
+}
+
+.mobile-menu-links li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mobile-nav-link {
+    display: block;
+    padding: var(--spacing-sm);
+    color: var(--color-dark);
+    font-weight: 500;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+    background: var(--color-cream);
+    color: var(--color-gold);
+}
+
+.mobile-cta {
+    width: 100%;
+    margin-top: var(--spacing-sm);
+}
+
+@media (max-width: 968px) {
+
+    .navbar-links,
+    .navbar-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
