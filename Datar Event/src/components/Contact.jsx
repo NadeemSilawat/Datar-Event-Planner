@@ -27,25 +27,25 @@ const Contact = () => {
         {
             icon: Phone,
             title: 'Phone',
-            info: '+1 (555) 123-4567',
-            link: 'tel:+15551234567'
+            info: '+91 7340397304',
+            link: 'tel:+917340397304'
         },
         {
             icon: Mail,
             title: 'Email',
-            info: 'info@datarevent.com',
-            link: 'mailto:info@datarevent.com'
+            info: 'datarevent@gmail.com',
+            link: 'datarevent@gmail.com'
         },
         {
             icon: MapPin,
             title: 'Address',
-            info: '123 Wedding Lane, Event City, EC 12345',
+            info: 'Jumma Masjid Marg, Pali',
             link: '#'
         },
         {
             icon: Clock,
             title: 'Business Hours',
-            info: 'Mon-Sat: 9AM - 6PM',
+            info: 'Mon-Sat: 9AM - 7PM',
             link: '#'
         }
     ];

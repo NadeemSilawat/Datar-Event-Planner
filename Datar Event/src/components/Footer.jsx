@@ -92,6 +92,9 @@ const Footer = () => {
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
+                    <p style={{ marginBottom: '0.5rem', fontSize: '1rem', fontWeight: '500' }}>
+                        Made By "Nadeem Silawat" | Developer: +91 7424898859
+                    </p>
                     <p>
                         © {currentYear} Datar Event. All rights reserved. Made with{' '}
                         <Heart size={16} className="heart-icon" fill="currentColor" /> for couples in love.

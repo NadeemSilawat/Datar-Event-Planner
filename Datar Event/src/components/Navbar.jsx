@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
 
@@ -69,6 +69,19 @@ const Navbar = () => {
                     ))}
                 </ul>
 
+                <motion.a
+                    href="https://instagram.com/datar_event_pali"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="instagram-link"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label="Visit our Instagram"
+                    style={{ marginRight: '1rem', color: '#E4405F', display: 'flex', alignItems: 'center' }}
+                >
+                    <Instagram size={24} />
+                </motion.a>
+
                 <motion.button
                     className="btn btn-primary navbar-cta"
                     whileHover={{ scale: 1.05 }}
@@ -115,7 +128,18 @@ const Navbar = () => {
                             <motion.li
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
+                                style={{ display: 'flex', gap: '1rem', alignItems: 'center', justifyContent: 'center' }}
                             >
+                                <a
+                                    href="https://instagram.com/datar_event_pali"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="instagram-link-mobile"
+                                    aria-label="Visit our Instagram"
+                                    style={{ color: '#E4405F', display: 'flex', alignItems: 'center' }}
+                                >
+                                    <Instagram size={24} />
+                                </a>
                                 <button className="btn btn-primary mobile-cta">
                                     Book Now
                                 </button>
